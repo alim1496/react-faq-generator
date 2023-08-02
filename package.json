@@ -1,6 +1,6 @@
 {
 	"name": "react-faq-generator",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A simple FAQ section generator in react applications",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
