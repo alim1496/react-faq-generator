@@ -41,6 +41,9 @@ const MyApp = () => {
 export default MyApp
 ```
 
+## Live Demo
+You can check the live demo [here](https://codesandbox.io/s/funny-https-vjdt49?file=/src/App.tsx)
+
 ## Properties
 
 | Property    | Type            | Default Value          | Description                                                                |
