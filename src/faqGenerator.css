@@ -9,6 +9,10 @@
 	margin: 10px;
 }
 
+.content-wrapper {
+	padding: 10px;
+}
+
 details > summary:first-of-type {
     list-style-type: none;
 }
@@ -24,12 +28,12 @@ details summary::-webkit-details-marker {
 }
 
 details {
-	border: 1px solid #c9d4e4;
-	border-radius: 4px;
 	margin-bottom: 10px;
 }
 
 summary {
+	border-left: 5px solid #e41d1d;
+	background-color: #ecf0f3a6;
 	font-weight: 700;
 	padding: 10px;
 	display: flex;
@@ -41,10 +45,17 @@ summary span {
 	width: 80%;
 }
 
+summary b {
+	width: 20px;
+	height: 20px;
+	background-color: #1d1e1e;
+	color: #fff;
+	text-align: center;
+}
+
 summary b::after {
 	content: "+";
 	font-size: 18px;
-	margin-right: 5px;
 }
 
 details[open] summary b::after {
@@ -53,10 +64,5 @@ details[open] summary b::after {
 
 summary:hover {
 	cursor: pointer;
-	background-color: #c9d4e4;
-}
-
-details[open] summary {
-	background-color: #c9d4e4;
-	border-bottom: 1px solid #c9d4e4;
+	background-color: #ecf0f3;
 }

@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import './faqGenerator.css'
 
 type Info = {
+	id: number
 	question: string
 	answer: string
 }
@@ -16,9 +17,9 @@ const FAQGenerator: FC<FAQProps> = ({ title = 'FAQ', className = '', data }) => 
 	return (
 		<div className={`faq-container ${className}`}>
 			<div className="faq-title">{title}</div>
-			<div className="content-wrappe">
-				{data?.map((_query, index) => (
-					<details key={index}>
+			<div className="content-wrapper">
+				{data?.map((_query) => (
+					<details key={_query.id}>
 						<summary>
 							<span>{_query.question}</span>
 							<b></b>
