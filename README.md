@@ -9,6 +9,11 @@ This repository contains a simple Frequently Asked Questions Section generator i
 npm install react-faq-generator
 ```
 
+### YARN
+```sh
+yarn add react-faq-generator
+```
+
 ## Usage
 ```js
 import React from 'react'
