@@ -15,7 +15,7 @@ interface FAQProps {
 
 const FAQGenerator: FC<FAQProps> = ({ title = 'FAQ', className = '', data }) => {
 	return (
-		<div className={`faq-container ${className}`}>
+		<div data-testid="faq-container" className={`faq-container ${className}`}>
 			<div className="faq-title">{title}</div>
 			<div className="content-wrapper">
 				{data?.map((_query) => (
