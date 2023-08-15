@@ -11,11 +11,12 @@ interface FAQProps {
 	data: Info[]
 	title?: string
 	className?: string
+	darkMode?: boolean
 }
 
-const FAQGenerator: FC<FAQProps> = ({ title = 'FAQ', className = '', data }) => {
+const FAQGenerator: FC<FAQProps> = ({ title = 'FAQ', className = '', data, darkMode = false }) => {
 	return (
-		<div data-testid="faq-container" className={`faq-container ${className}`}>
+		<div data-testid="faq-container" className={`faq-container ${darkMode ? 'faq-dark' : ''} ${className}`}>
 			<div className="faq-title">{title}</div>
 			<div className="content-wrapper">
 				{data?.map((_query) => (

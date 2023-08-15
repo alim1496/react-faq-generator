@@ -3,6 +3,10 @@
 	margin: auto;
 }
 
+.faq-dark {
+	color: #fff;
+}
+
 .faq-title {
 	font-weight: 700;
 	text-align: center;

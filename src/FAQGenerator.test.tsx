@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { expect, test, describe } from 'vitest'
 import FAQGenerator from './FAQGenerator'
 
@@ -27,25 +27,31 @@ describe('The FAQ container render', () => {
 		expect(container.getElementsByClassName('faq-container').length).toBe(1)
 	})
 
-  test('Title should be displayed if not passed', () => {
-    const { container } = render(<FAQGenerator data={data} />)
+	test('Title should be displayed if not passed', () => {
+		const { container } = render(<FAQGenerator data={data} />)
 		const titleHolder = container.getElementsByClassName('faq-title')[0]
-    expect(titleHolder.innerHTML).toBe('FAQ')
-  })
+		expect(titleHolder.innerHTML).toBe('FAQ')
+	})
 
-  test('Title should be displayed alike as it is passed', () => {
-    const { container } = render(<FAQGenerator data={data} title="Questions Asked Most" />)
+	test('Title should be displayed alike as it is passed', () => {
+		const { container } = render(<FAQGenerator data={data} title="Questions Asked Most" />)
 		const titleHolder = container.getElementsByClassName('faq-title')[0]
-    expect(titleHolder.innerHTML).toBe('Questions Asked Most')
-  })
+		expect(titleHolder.innerHTML).toBe('Questions Asked Most')
+	})
 
-  test('Custom className should be displayed if passed', () => {
-    const { container } = render(<FAQGenerator data={data} className="custom-container" />)
+	test('Custom className should be displayed if passed', () => {
+		const { container } = render(<FAQGenerator data={data} className="custom-container" />)
 		expect(container.getElementsByClassName('custom-container').length).toBe(1)
-  })
+	})
 
-  test('Data should be displayed', () => {
-    const { container } = render(<FAQGenerator data={data} />)
+	test('Data should be displayed', () => {
+		const { container } = render(<FAQGenerator data={data} />)
 		expect(container.getElementsByTagName('details').length).toBe(3)
-  })
+	})
+
+	test('Dark mode should be applied if passed', () => {
+		const { container } = render(<FAQGenerator data={data} darkMode={true} />)
+		expect(container.getElementsByClassName('faq-dark').length).toBe(1)
+	})
+
 })
