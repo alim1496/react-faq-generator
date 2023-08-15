@@ -56,6 +56,7 @@ You can check the live demo [here](https://codesandbox.io/s/funny-https-vjdt49?f
 | `data`      | array of object | null                   | An array of questions & answers to be displayed. This prop must be passed. |
 | `title`     | string          | 'FAQ'                  | The title of the FAQ section.                                              |
 | `className` | string          | ''                     | The name of the class containing customm css rules to be applied.          |
+| `darkMode`  | boolean         | false                  | If in dark mode then pass this prop as `true`.                             |
 
 
 ## License

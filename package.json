@@ -6,6 +6,11 @@
 	"module": "dist/esm/index.js",
 	"types": "dist/index.d.ts",
 	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alim1496/react-faq-generator"
+	},
+	"homepage": "https://github.com/alim1496/react-faq-generator",
 	"scripts": {
 		"clean": "rimraf dist/",
 		"watch": "rollup -c -w --bundleConfigAsCjs",
